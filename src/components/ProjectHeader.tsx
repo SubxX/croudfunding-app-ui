@@ -1,7 +1,15 @@
+import { useState } from "react";
 import Main from "./sub-components/Main";
 import { FaBookmark } from "react-icons/fa";
+import Modal from "./sub-components/Modal";
+import BackProjectModal from "./BackProjectModal";
 
 const ProjectHeader = () => {
+  const [popup, setPopup] = useState<boolean>(false);
+
+  const openPopup = () => setPopup(true);
+  const closePoup = () => setPopup(false);
+
   return (
     <Main className="text-center project-header relative">
       <div className="project-logo">
@@ -28,7 +36,9 @@ const ProjectHeader = () => {
         strain.
       </p>
       <div className="actions flex items-center justify-between">
-        <button className="btn btn-default">Back this project</button>
+        <button className="btn btn-default" onClick={openPopup}>
+          Back this project
+        </button>
         <button className="btn btn-gray btn-icon">
           <div className="icon">
             <FaBookmark />
@@ -36,6 +46,12 @@ const ProjectHeader = () => {
           <span>Bookmark</span>
         </button>
       </div>
+
+      {popup && (
+        <Modal closePopup={closePoup}>
+          <BackProjectModal />
+        </Modal>
+      )}
     </Main>
   );
 };
