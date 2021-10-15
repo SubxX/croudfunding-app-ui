@@ -5,7 +5,7 @@ import Modal from "./sub-components/Modal";
 import BackProjectModal from "./BackProjectModal";
 
 const ProjectHeader = () => {
-  const [popup, setPopup] = useState<boolean>(false);
+  const [popup, setPopup] = useState<boolean>(true);
 
   const openPopup = () => setPopup(true);
   const closePoup = () => setPopup(false);
@@ -47,11 +47,9 @@ const ProjectHeader = () => {
         </button>
       </div>
 
-      {popup && (
-        <Modal closePopup={closePoup}>
-          <BackProjectModal />
-        </Modal>
-      )}
+      <Modal isOpen={popup} closePopup={closePoup}>
+        <BackProjectModal />
+      </Modal>
     </Main>
   );
 };
