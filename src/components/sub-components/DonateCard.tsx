@@ -1,8 +1,13 @@
 import { useEffect, useRef } from "react";
 import { MdAttachMoney } from "react-icons/md";
-const DonateCard = ({ selected, index, setSelected }: any) => {
+
+const DonateCard = ({ selected, index, setSelected, closePopup }: any) => {
   const changeSelected = () => {
     setSelected(index);
+  };
+
+  const closePopupWithSuccess = (e: any) => {
+    closePopup(e, true);
   };
 
   return (
@@ -34,7 +39,9 @@ const DonateCard = ({ selected, index, setSelected }: any) => {
           <p className="text-gray">Enter your pledge</p>
           <div className="action-btns flex items-center">
             <DonateCardInput initialValue={25} />
-            <button className="btn btn-default">Continue</button>
+            <button className="btn btn-default" onClick={closePopupWithSuccess}>
+              Continue
+            </button>
           </div>
         </div>
       )}

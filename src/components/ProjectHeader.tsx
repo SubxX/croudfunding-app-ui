@@ -3,12 +3,18 @@ import Main from "./sub-components/Main";
 import { FaBookmark } from "react-icons/fa";
 import Modal from "./sub-components/Modal";
 import BackProjectModal from "./BackProjectModal";
+import ThanksModal from "./ThanksModal";
 
 const ProjectHeader = () => {
-  const [popup, setPopup] = useState<boolean>(true);
+  const [backUspopup, setbackUsPopup] = useState<boolean>(false);
+  const [successPopup, setSuccessPopup] = useState(false);
 
-  const openPopup = () => setPopup(true);
-  const closePoup = () => setPopup(false);
+  const openPopup = () => setbackUsPopup(true);
+  const closePopup = (e: any, success = false) => {
+    setbackUsPopup(false);
+    if (success) setSuccessPopup(true);
+  };
+  const closeSuccessPopup = () => setSuccessPopup(false);
 
   return (
     <Main className="text-center project-header relative">
@@ -47,8 +53,17 @@ const ProjectHeader = () => {
         </button>
       </div>
 
-      <Modal isOpen={popup} closePopup={closePoup}>
+      <Modal isOpen={backUspopup} closePopup={closePopup}>
         <BackProjectModal />
+      </Modal>
+
+      <Modal
+        isOpen={successPopup}
+        closePopup={closeSuccessPopup}
+        className="success-popup-root"
+        closeBtn={false}
+      >
+        <ThanksModal />
       </Modal>
     </Main>
   );

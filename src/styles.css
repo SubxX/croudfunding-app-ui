@@ -21,9 +21,6 @@ body {
   padding: 0;
   margin: 0;
 }
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
 button {
   background: none;
   border: none;
@@ -128,16 +125,17 @@ button:focus {
   z-index: 20;
   overflow-y: auto;
   overflow-x: hidden;
-  /* display: inline-flex;
-  align-items: center;
-  justify-content: center; */
 }
 .modal {
-  margin: 12vh auto 50px auto;
   z-index: 30;
   width: 100%;
   max-width: var(--container-width);
-  padding: 15px;
+  padding: 50px 15px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .modal .close-popup {
   position: absolute;
@@ -521,4 +519,18 @@ nav .menu-opener-btn {
     grid-row: 1;
     grid-column: 3;
   }
+}
+
+.success-popup-root {
+  max-width: 550px;
+}
+
+.success-popup p {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 30px 0 20px 0;
+}
+.success-popup .content {
+  margin-bottom: 30px;
+  line-height: 1.8;
 }
