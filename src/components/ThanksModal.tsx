@@ -3,7 +3,7 @@ const ThanksModal = ({ closePopup }: any) => {
   return (
     <div className="success-popup">
       <BsFillPatchCheckFill size={100} className="text-primary" />
-      <p>Thanks for your support</p>
+      <p className="title">Thanks for your support</p>
       <div className="content text-gray">
         <span>
           Your pledge bring us one step closer to sharing Mastercraft Bamboo

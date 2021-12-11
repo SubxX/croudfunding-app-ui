@@ -13,6 +13,10 @@ body {
   font-size: 16px;
   background: #fafafa;
   color: var(--black);
+  line-height: 1.8;
+}
+.title {
+  line-height: 1.3;
 }
 *,
 *::after,
@@ -265,7 +269,6 @@ nav .menu-opener-btn {
 .project-metadata-grid p {
   font-size: 35px;
   font-weight: 700;
-  margin-bottom: 5px;
 }
 .project-metadata-grid span {
   display: block;
@@ -305,7 +308,6 @@ nav .menu-opener-btn {
 }
 .project-details .sub-points span {
   display: block;
-  line-height: 1.8;
   font-size: 16px;
   margin-bottom: 25px;
 }
@@ -326,12 +328,6 @@ nav .menu-opener-btn {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.product .product-header > * {
-  margin-bottom: 10px;
-}
-.product .product-extras > * {
-  margin-top: 20px;
-}
 
 .product .product-header p {
   font-size: 18px;
@@ -339,7 +335,6 @@ nav .menu-opener-btn {
 }
 .product .product-detail {
   margin-top: 10px;
-  line-height: 1.8;
 }
 .product .product-extras p {
   font-size: 35px;
@@ -359,7 +354,6 @@ nav .menu-opener-btn {
   margin-bottom: 15px;
 }
 .back-project-modal > span {
-  line-height: 1.8;
   display: block;
 }
 
@@ -372,6 +366,9 @@ nav .menu-opener-btn {
   transition: border-color 0.25s ease;
 }
 
+.donate-card .checkbox-wrapper {
+  margin-top: 5px;
+}
 .donate-card .checkbox {
   width: 25px;
   height: 25px;
@@ -403,7 +400,6 @@ nav .menu-opener-btn {
   padding-right: 10px;
 }
 .donate-card .card-content {
-  line-height: 1.8;
   grid-column: span 3;
 }
 .donate-card .card-title {
@@ -532,5 +528,4 @@ nav .menu-opener-btn {
 }
 .success-popup .content {
   margin-bottom: 30px;
-  line-height: 1.8;
 }

@@ -6,7 +6,7 @@ const BackProjectModal = ({ closePopup }: any) => {
 
   return (
     <div className="back-project-modal text-left">
-      <p>Back this proejct</p>
+      <p className="title">Back this project</p>
       <span className="text-gray">
         Want to support us in bringing Mastercraft Bamboo Monitor Riser in the
         world ?

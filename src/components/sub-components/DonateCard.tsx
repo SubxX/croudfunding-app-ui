@@ -16,7 +16,9 @@ const DonateCard = ({ selected, index, setSelected, closePopup }: any) => {
       onClick={changeSelected}
     >
       <div className="donate-card-body">
-        <div className="checkbox"></div>
+        <div className="checkbox-wrapper">
+          <div className="checkbox"></div>
+        </div>
 
         <div className="card-title">
           <p>Pledge with no reward</p>
